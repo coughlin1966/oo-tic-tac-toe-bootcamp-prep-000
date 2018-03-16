@@ -2,7 +2,6 @@ class TicTacToe
 
 def initialize(board = nil)
   @board = board || Array.new(9, " ")
-  #@win = win
 end
 
 WIN_COMBINATIONS = [
@@ -115,33 +114,33 @@ end
 #   display_board
 # end
 
-def won?
-WIN_COMBINATIONS.each do |win|
-    if win.all? {|y| @board[y] == "X" || win.all? |y| @board[y] == "O"}
-      return win
-    end
-  end
-  false
-end
-
-
-def full?
-  @board.all? {|taken| taken != " "}
-end
-
-def draw?
-  !won? && full?
-end
-
-def over?
-  draw? || full? && won? || full? && !won?
-end
-
-def winner
-  if draw? || !full? && !won?
-    nil
-  end
-end
+# def won?
+# WIN_COMBINATIONS.each do |win|
+#     if win.all? {|y| @board[y] == "X" || win.all? |y| @board[y] == "O"}
+#       return win
+#     end
+#   end
+#   false
+# end
+# 
+# 
+# def full?
+#   @board.all? {|taken| taken != " "}
+# end
+# 
+# def draw?
+#   !won? && full?
+# end
+# 
+# def over?
+#   draw? || full? && won? || full? && !won?
+# end
+# 
+# def winner
+#   if draw? || !full? && !won?
+#     nil
+#   end
+# end
 
 def play
   while !over?
