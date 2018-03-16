@@ -32,9 +32,9 @@ def move(index, value)
 end
 
 def position_taken?(index)
-  if @board[index] == " " || @board[index] == "" || @board[index] == nil
+  if @board[index] == " " || @board[index] == "" || @board[index] == nil ||
   #false
-  || @board[index] == "X" || @board[index] =="O"
+  @board[index] == "X" || @board[index] =="O"
   #true
   end
 end
