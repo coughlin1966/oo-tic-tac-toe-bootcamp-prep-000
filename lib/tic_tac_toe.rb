@@ -122,20 +122,20 @@ end
 #   end
 #   false
 # end
-# 
-# 
+#
+#
 # def full?
 #   @board.all? {|taken| taken != " "}
 # end
-# 
+#
 # def draw?
 #   !won? && full?
 # end
-# 
+#
 # def over?
 #   draw? || full? && won? || full? && !won?
 # end
-# 
+#
 # def winner
 #   if draw? || !full? && !won?
 #     nil
