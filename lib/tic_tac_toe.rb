@@ -34,13 +34,13 @@ end
 def position_taken?(index)
   if @board[index] == " " || @board[index] == "" || @board[index] == nil
   false
-  else
+elsif @board[index] == "X" || @board[index] "O"
   true
   end
 end
 
 def valid_move?(index)
-  index.between?(0,8) && position_taken?(index)
+  index.between?(0,8) && !position_taken?(index)
 end
 
 def turn_count
